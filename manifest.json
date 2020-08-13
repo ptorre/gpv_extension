@@ -1,0 +1,23 @@
+{
+  "name": "GoPlayVideo",
+  "version": "1.0",
+  "description": "Go play this video externally extension",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "browser_action": {
+      "default_title":"GPV",
+      "default_popup": "popup-url.html"
+  },
+  "background": {
+       "scripts": ["background.js"],
+       "persistent": true
+  },
+  "icons": {
+      "48": "go-jump-symbolic.symbolic.png"
+  },
+  "manifest_version": 2
+}
