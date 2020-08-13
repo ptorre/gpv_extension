@@ -1,0 +1,32 @@
+{
+  "name": "Embedded Video",
+  "version": "1.0",
+  "description": "Embedded Video extension",
+  "permissions": [
+      "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "browser_action": {
+      "default_title":"GPVideo"
+  },
+  "background": {
+       "scripts": ["background.js"],
+       "persistent": true
+  },
+  "content_scripts": [
+       {
+         "matches": ["https://learning.oreilly.com/*"],
+         "js" : ["video-contentscript.js"],
+         "run_at": "document_start"
+       }
+  ],
+  "icons": {
+      "48": "go-jump-symbolic.symbolic.png"
+  },
+  "commands": {
+  },
+  "manifest_version": 2
+}
