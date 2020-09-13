@@ -10,7 +10,8 @@
     "http://*/*"
   ],
   "browser_action": {
-      "default_title":"GPVideo"
+      "default_title":"GPVideo",
+      "default_popup": "popup-url.html"
   },
   "background": {
        "scripts": ["background.js"],

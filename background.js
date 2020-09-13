@@ -12,6 +12,7 @@ async function delayClearBadgeText(ms) {
 chrome.runtime.onInstalled.addListener(function() {
     console.log("Installed");
     chrome.browserAction.setBadgeText({text: "⚡"});
+    delayClearBadgeText(5000)
 })
 
 chrome.runtime.onSuspend.addListener(function() {
@@ -22,6 +23,7 @@ chrome.runtime.onSuspend.addListener(function() {
 chrome.webRequest.onBeforeSendHeaders.addListener(
   function(details) {
     if (details.type == "xmlhttprequest" && details.url.includes("a.m3u8")) {
+      chrome.browserAction.setBadgeText({'text': details.url});
       console.log(details)
     }
     return {}
