@@ -3,10 +3,10 @@
   "version": "1.0",
   "description": "Go play this video externally extension",
   "permissions": [
+    "storage",
     "webRequest",
     "webRequestBlocking",
-    "https://*/*",
-    "http://*/*"
+    "*://*/*"
   ],
   "browser_action": {
       "default_title":"GPV",
